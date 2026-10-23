@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fyrghdyrgh-dot.github.io/vps-launch-checklist/sitemap.xml

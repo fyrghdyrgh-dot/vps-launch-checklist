@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VPS 上线清单 - 把服务器建站、部署、备份、监控一次梳理清楚。</title>
+  <meta name="description" content="面向 VPS 和云服务器用户的上线清单站，提供部署步骤、风险排查和资源建议。">
+  <meta name="keywords" content="VPS 教程, 服务器建站, 云服务器清单, Linux 部署, GitHub Pages">
+  <meta name="theme-color" content="#6d5efc">
+  <link rel="canonical" href="https://fyrghdyrgh-dot.github.io/vps-launch-checklist/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VPS 上线清单">
+  <meta property="og:description" content="面向 VPS 和云服务器用户的上线清单站，提供部署步骤、风险排查和资源建议。">
+  <meta property="og:url" content="https://fyrghdyrgh-dot.github.io/vps-launch-checklist/">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="./assets/site.css">
+</head>
+<body>
+  <header class="site-shell hero">
+    <nav class="nav">
+      <a class="brand" href="./">VPS 上线清单</a>
+      <div class="nav-meta">
+        <span class="pill">服务器引流站</span>
+        <span class="pill pill-soft">教程型工具站</span>
+      </div>
+    </nav>
+    <div class="hero-grid">
+      <section>
+        <p class="eyebrow">服务器部署与建站</p>
+        <h1>VPS 上线清单</h1>
+        <p class="lead">把服务器建站、部署、备份、监控一次梳理清楚。</p>
+        <p class="sublead">围绕服务器建站、节点选择与部署场景，提供真实可用的内容与工具。</p>
+        <div class="cta-row">
+          <a class="button" href="#feature">立即使用</a>
+          <a class="button button-ghost" href="#faq">查看常见问题</a>
+        </div>
+      </section>
+      <aside class="hero-panel">
+        <h2>站点摘要</h2>
+        <ul class="summary-list">
+          <li><strong>主题</strong><span>服务器部署与建站</span></li>
+          <li><strong>发布方式</strong><span>GitHub Pages 静态托管</span></li>
+          <li><strong>更新形态</strong><span>配置驱动 + 自动部署</span></li>
+          <li><strong>SEO 基础</strong><span>Canonical / robots / sitemap 已生成</span></li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <main class="site-shell">
+    <section class="section section-grid">
+      <article class="card"><h2>选题聚焦</h2><p>围绕真实服务器使用场景输出内容，避免无意义关键词堆砌。</p></article><article class="card"><h2>自然引导</h2><p>只在服务器采购、节点选择或带宽需求相关位置自然引导到 1bgp.com。</p></article><article class="card"><h2>可持续扩展</h2><p>保留专题页、FAQ、广告位和统计位，后续可继续叠加流量玩法。</p></article>
+    </section>
+
+    <section class="section split">
+      <div>
+        <p class="eyebrow">站点定位</p>
+        <h2>不是简单换标题，而是按主题组织结构</h2>
+        <p>面向 VPS 和云服务器用户的上线清单站，提供部署步骤、风险排查和资源建议。</p>
+      </div>
+      <div class="card-stack">
+        <article class="card"><h3>常见场景</h3><p>博客建站、API 托管、下载分发、出海电商、跨境业务部署。</p></article><article class="card"><h3>内容方向</h3><p>配置教程、部署清单、选型指南、排障问答、节点推荐。</p></article><article class="card"><h3>增长方式</h3><p>通过搜索需求页获取精准流量，再在相关位置放置合适的购买入口。</p></article>
+      </div>
+    </section>
+
+    <section class="section feature-wrap" id="feature">
+      <div class="section-head">
+        <p class="eyebrow">核心功能</p>
+        <h2>部署检查清单</h2>
+        <p>把上线前后最常漏掉的关键步骤放到一个可勾选、可保存进度的清单里。</p>
+      </div>
+      <div class="feature-grid">
+      <article class="tool-card">
+        <h3>上线进度</h3>
+        <p>勾选后会自动保存在本地浏览器，下次打开会继续保留进度。</p>
+        <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+        <p id="progressText">0 / 6 完成</p>
+        <div class="checklist" id="checklistRoot">
+          <label class="check-item"><input type="checkbox" data-check-item="0"><span>确认域名解析与 SSL 方案</span></label><label class="check-item"><input type="checkbox" data-check-item="1"><span>初始化系统用户与 SSH Key</span></label><label class="check-item"><input type="checkbox" data-check-item="2"><span>部署 Nginx 或 Caddy 反向代理</span></label><label class="check-item"><input type="checkbox" data-check-item="3"><span>配置应用环境变量与备份策略</span></label><label class="check-item"><input type="checkbox" data-check-item="4"><span>启用监控、告警与日志轮转</span></label><label class="check-item"><input type="checkbox" data-check-item="5"><span>准备上线后的回滚方案</span></label>
+        </div>
+      </article>
+      <article class="tool-card">
+        <h3>上线建议</h3>
+        <div class="result-panel">
+          适合用于单页建站、VPS 部署、反向代理配置、备份和回滚梳理。<br><br>
+          先把基础环境、证书、监控和回滚链路确认好，再逐步补营销页与 SEO 页面，效率更高。
+        </div>
+      </article>
+    </div>
+    </section>
+
+    <section class="section promo">
+    <div class="section-head">
+      <p class="eyebrow">相关资源</p>
+      <h2>如果你已经进入服务器采购阶段</h2>
+      <p>当前页面以教程和工具为主；当你已经明确需要购买服务器、补节点或比较带宽方案时，可以继续查看相关产品。</p>
+    </div>
+    <article class="card">
+      <h3>服务器采购入口</h3>
+      <p>如果你的需求已经从“学习怎么部署”进入到“准备实际购买节点或服务器”，可以继续前往 <a class="inline-link" href="https://1bgp.com/">1bgp.com</a> 查看服务器产品与节点方案。</p>
+      <p class="promo-note">这里只在主题相关的场景提供延伸入口，不会在无关内容里强插推广。</p>
+    </article>
+  </section>
+
+    <section class="section utility-grid">
+      <article class="card">
+        <h2>规范链接</h2>
+        <p>当前页面已输出 canonical、robots.txt 与 sitemap.xml，适配 GitHub Pages 项目路径。</p>
+      </article>
+      <article class="card">
+        <h2>统计预留</h2>
+        <p>已预留统计代码位置，后续可接入你自己的分析方案。</p>
+        <pre class="placeholder">&lt;!-- analytics slot --&gt;</pre>
+      </article>
+      <article class="card">
+        <h2>广告位预留</h2>
+        <p>已预留内容位与广告位插槽，但默认不接入第三方广告账号。</p>
+        <pre class="placeholder">&lt;!-- ad slot --&gt;</pre>
+      </article>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">常见问题</p>
+        <h2>后续扩展时重点关注这些点</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item"><summary>为什么站点里会出现 1bgp.com？</summary><p>仅在用户已经产生服务器采购或节点筛选需求时，页面会提供一个自然的延伸入口。</p></details><details class="faq-item"><summary>站点适合发布什么内容？</summary><p>适合教程、实用工具、部署流程、问题排查和服务器选型建议。</p></details><details class="faq-item"><summary>是否支持后续加专题页？</summary><p>支持。当前模板是静态结构，可继续扩展更多 HTML 页面或 JSON 数据源。</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-shell footer">
+    <p>VPS 上线清单 · 服务器部署与建站</p>
+    <p>当前地址：<a href="https://fyrghdyrgh-dot.github.io/vps-launch-checklist/">https://fyrghdyrgh-dot.github.io/vps-launch-checklist/</a></p>
+  </footer>
+
+  <script>window.__SITE_DATA__ = {"owner":"fyrghdyrgh-dot","siteUrl":"https://fyrghdyrgh-dot.github.io/vps-launch-checklist/","repo":"vps-launch-checklist","slug":"vps-launch-checklist","name":"VPS 上线清单","tagline":"把服务器建站、部署、备份、监控一次梳理清楚。","description":"面向 VPS 和云服务器用户的上线清单站，提供部署步骤、风险排查和资源建议。","topic":"服务器部署与建站","category":"server-lead","keywords":["VPS 教程","服务器建站","云服务器清单","Linux 部署","GitHub Pages"],"lang":"zh-CN","colors":{"accent":"#6d5efc","accentSoft":"#edeaff","surface":"#0f172a","surfaceSoft":"#111827"},"promoteTarget":true,"targetLink":"https://1bgp.com/","analyticsPlaceholder":true,"adPlaceholder":true,"feature":{"kind":"deploymentChecklist","items":["确认域名解析与 SSL 方案","初始化系统用户与 SSH Key","部署 Nginx 或 Caddy 反向代理","配置应用环境变量与备份策略","启用监控、告警与日志轮转","准备上线后的回滚方案"]},"referenceStyle":"教程型工具站","sections":{"highlights":[{"title":"选题聚焦","text":"围绕真实服务器使用场景输出内容，避免无意义关键词堆砌。"},{"title":"自然引导","text":"只在服务器采购、节点选择或带宽需求相关位置自然引导到 1bgp.com。"},{"title":"可持续扩展","text":"保留专题页、FAQ、广告位和统计位，后续可继续叠加流量玩法。"}],"contentCards":[{"title":"常见场景","text":"博客建站、API 托管、下载分发、出海电商、跨境业务部署。"},{"title":"内容方向","text":"配置教程、部署清单、选型指南、排障问答、节点推荐。"},{"title":"增长方式","text":"通过搜索需求页获取精准流量，再在相关位置放置合适的购买入口。"}],"faq":[{"q":"为什么站点里会出现 1bgp.com？","a":"仅在用户已经产生服务器采购或节点筛选需求时，页面会提供一个自然的延伸入口。"},{"q":"站点适合发布什么内容？","a":"适合教程、实用工具、部署流程、问题排查和服务器选型建议。"},{"q":"是否支持后续加专题页？","a":"支持。当前模板是静态结构，可继续扩展更多 HTML 页面或 JSON 数据源。"}]}};</script>
+  <script type="module" src="./assets/site.js"></script>
+</body>
+</html>
